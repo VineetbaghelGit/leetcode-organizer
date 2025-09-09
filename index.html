@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeetCode Problem Organizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Added header with search functionality -->
+        <div class="header">
+            <div class="search-container">
+                <input type="search" id="search-input" placeholder="Search problems (e.g., '232' or 'Queue using Stacks')" />
+                <div class="search-icon">🔍</div>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <div class="folder-icon">📁</div>
+                    <span class="sidebar-title">Topics</span>
+                </div>
+                <div id="concept-list" class="concept-list">
+                    <!-- Concepts will be loaded here -->
+                </div>
+            </div>
+
+            <div class="main-panel">
+                <div id="welcome-screen" class="welcome-screen">
+                    <div class="welcome-content">
+                        <h2>LeetCode Problem Organizer</h2>
+                        <p>Select a topic from the sidebar to view problems or use the search box above</p>
+                    </div>
+                </div>
+
+                <!-- Added search results view -->
+                <div id="search-results" class="search-results" style="display: none;">
+                    <div class="breadcrumb">
+                        <button id="search-back-btn" class="breadcrumb-btn">Topics</button>
+                        <span class="breadcrumb-separator">></span>
+                        <span>Search Results</span>
+                    </div>
+                    
+                    <div class="problems-list" id="search-results-list">
+                        <!-- Search results will be loaded here -->
+                    </div>
+                </div>
+
+                <div id="concept-view" class="concept-view" style="display: none;">
+                    <div class="breadcrumb">
+                        <button id="concept-back-btn" class="breadcrumb-btn">Topics</button>
+                        <span class="breadcrumb-separator">></span>
+                        <span id="concept-title"></span>
+                    </div>
+                    
+                    <div class="problems-list" id="problems-list">
+                        <!-- Problems will be loaded here -->
+                    </div>
+                </div>
+
+                <div id="problem-view" class="problem-view" style="display: none;">
+                    <div class="breadcrumb">
+                        <button id="back-btn" class="breadcrumb-btn">Topics</button>
+                        <span class="breadcrumb-separator">></span>
+                        <span id="breadcrumb-concept"></span>
+                        <span class="breadcrumb-separator">></span>
+                        <span id="problem-title"></span>
+                    </div>
+
+                    <div class="editor-container">
+                        <div class="file-tabs">
+                            <div class="tab-btn active" data-tab="question">
+                                <span class="file-icon">📄</span>
+                                <span>question.md</span>
+                            </div>
+                            <div class="tab-btn" data-tab="solution">
+                                <span class="file-icon">📄</span>
+                                <span>solution.js</span>
+                            </div>
+                        </div>
+
+                        <div class="editor-content">
+                            <div id="question-tab" class="tab-pane active">
+                                <div id="question-content"></div>
+                            </div>
+                            <div id="solution-tab" class="tab-pane">
+                                <div id="solution-content"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
