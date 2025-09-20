@@ -49,7 +49,7 @@ class LeetCodeOrganizer {
 
   async loadProblemsFromFileSystem() {
     try {
-      const conceptFolders = ["strings", "queues"];
+      const conceptFolders = ["strings", "queues", 'stacks'];
 
       for (const concept of conceptFolders) {
         try {
@@ -108,6 +108,7 @@ class LeetCodeOrganizer {
     const knownProblems = {
       strings: ["242-valid-anagram"],
       queues: ["232-Implement-queue-using-stacks"],
+      stacks:['20-Valid Parentheses']
     };
 
     return knownProblems[concept] || [];
