@@ -108,7 +108,7 @@ class LeetCodeOrganizer {
     const knownProblems = {
       strings: ["242-valid-anagram"],
       queues: ["232-Implement-queue-using-stacks"],
-      stacks:['20-Valid Parentheses']
+      stacks:['20-Valid Parentheses','155-Min Stack','1021-Remove Outermost Parentheses']
     };
 
     return knownProblems[concept] || [];
