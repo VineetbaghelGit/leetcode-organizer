@@ -49,7 +49,7 @@ class LeetCodeOrganizer {
 
   async loadProblemsFromFileSystem() {
     try {
-      const conceptFolders = ["strings", "queues", 'stacks'];
+      const conceptFolders = ["strings", "queues", "stacks"];
 
       for (const concept of conceptFolders) {
         try {
@@ -94,7 +94,6 @@ class LeetCodeOrganizer {
           console.log(`[v0] Could not load concept ${concept}:`, error);
         }
       }
-
       this.renderConceptList();
     } catch (error) {
       console.error("[v0] Error loading problems from file system:", error);
@@ -108,7 +107,15 @@ class LeetCodeOrganizer {
     const knownProblems = {
       strings: ["242-valid-anagram"],
       queues: ["232-Implement-queue-using-stacks"],
-      stacks:['20-Valid Parentheses','155-Min Stack','1021-Remove Outermost Parentheses']
+      stacks: [
+        "20-Valid Parentheses",
+        "155-Min Stack",
+        "1021-Remove Outermost Parentheses",
+        "150-Evaluate Reverse Polish Notation",
+        "496-Next Greater Element I",
+        "739-Daily Temperatures",
+        "503-Next Greater Element II",
+      ],
     };
 
     return knownProblems[concept] || [];
